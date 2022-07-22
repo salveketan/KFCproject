@@ -7,7 +7,7 @@ import Carousel from './Carousal'
 const LandingPage = () => {
     return (
         <div>
-            <Box bg='rgb(32,33,36)' w='100%' p={4} color='white' >
+            <Box bg='rgb(32,33,36)' w='100%' p={4} color='white'>
                 <Center gap={5}>
                     LET'S ORDER FOE DELIVERY, PICK UP, OR DINE-IN
                     <Button background={"red"} borderRadius={20}>Start Order</Button>

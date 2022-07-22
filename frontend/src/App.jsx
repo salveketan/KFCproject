@@ -1,13 +1,20 @@
+import { Box } from '@chakra-ui/react';
 import './App.css';
 import LandingPage from './components/Body/LandingPage';
 import Navbar from './components/Header/Navbar';
+import Navigation from './components/Navigate/Navigation';
 
 function App() {
   return (
     <div>
+      <Box>
         <Navbar />
-        <LandingPage/>
-        
+      </Box>
+      <Box>
+        {/* <LandingPage /> */}
+        <Navigation />
+      </Box>
+
     </div>
   );
 }

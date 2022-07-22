@@ -53,11 +53,11 @@ const Carousal = () => {
                                 </Box>
                                 <Box>
                                     <Flex>
-                                        <Box p='2' bg='white' marginTop={2}>
+                                        <Box p='2' bg='white' marginTop={2} cursor={"pointer"}>
                                             <ModalButton2 />
                                         </Box>
                                         <Spacer />
-                                        <Box p='2' bg='white'>
+                                        <Box p='2' bg='white' cursor={"pointer"}>
                                             <ModalButton1 />
                                         </Box>
                                     </Flex>
@@ -80,11 +80,11 @@ const Carousal = () => {
                                 </Box>
                                 <Box>
                                     <Flex>
-                                        <Box p='2' bg='white' marginTop={2}>
+                                        <Box p='2' bg='white' marginTop={2} cursor={"pointer"}>
                                             <ModalButton2 />
                                         </Box>
                                         <Spacer />
-                                        <Box p='2' bg='white'>
+                                        <Box p='2' bg='white' cursor={"pointer"}>
                                             <ModalButton1 />
                                         </Box>
                                     </Flex>
@@ -107,11 +107,11 @@ const Carousal = () => {
                                 </Box>
                                 <Box>
                                     <Flex>
-                                        <Box p='2' bg='white' marginTop={2}>
+                                        <Box p='2' bg='white' marginTop={2} cursor={"pointer"}>
                                             <ModalButton2 />
                                         </Box>
                                         <Spacer />
-                                        <Box p='2' bg='white'>
+                                        <Box p='2' bg='white' cursor={"pointer"}>
                                             <ModalButton1 />
                                         </Box>
                                     </Flex>
@@ -134,11 +134,11 @@ const Carousal = () => {
                                 </Box>
                                 <Box>
                                     <Flex>
-                                        <Box p='2' bg='white' marginTop={2}>
+                                        <Box p='2' bg='white' marginTop={2} cursor={"pointer"}>
                                             <ModalButton2 />
                                         </Box>
                                         <Spacer />
-                                        <Box p='2' bg='white'>
+                                        <Box p='2' bg='white' cursor={"pointer"}>
                                             <ModalButton1 />
                                         </Box>
                                     </Flex>

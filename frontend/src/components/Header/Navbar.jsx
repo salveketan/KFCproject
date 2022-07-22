@@ -27,11 +27,16 @@ import {
 // BsPersonCircle
 // import {  } from "react"
 import { BsPersonCircle } from "react-icons/bs";
+import { Link, Navigate } from 'react-router-dom';
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
 
+    const handle = () => {
+        <Navigate to="/addtocart" replace={true} />
+    }
+
     return (
-        <Box >
+        <Box bg={"white"} >
             <Flex
 
                 color={useColorModeValue('gray.600', 'white')}
@@ -65,18 +70,20 @@ export default function WithSubnavigation() {
                         textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                         fontFamily={'heading'}
                         color={useColorModeValue('gray.800', 'white')}>
-                        <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" />
+                        <Link to={"/"}>
+                            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" />
+                        </Link>
                     </Text>
                     <Text display={{ base: 'none', md: 'flex' }} marginLeft={50} >
 
-                        <Heading as='h3' size='xs' color="black">
-                            Menu
+                        <Heading as='h3' size='xs' color="black" cursor={"pointer"} href={'/menu'}>
+                            <Link to={"/menu"}>Menu</Link>
                         </Heading>
                     </Text>
                     <Text display={{ base: 'none', md: 'flex' }} marginLeft={30}>
 
-                        <Heading as='h3' size='xs' color="black">
-                            Deals
+                        <Heading as='h3' size='xs' color="black" cursor={"pointer"}>
+                            <Link to={"/deals"}>Deals</Link>
                         </Heading>
                     </Text>
 
@@ -106,33 +113,28 @@ export default function WithSubnavigation() {
                     <Box display={"flex"} gap={3} marginTop={4}>
                         <BsPersonCircle color='black' size={25} />
 
-                        <Heading as='h5' size='sm' w={"60px"} color="black">
-                            Sign In
+                        <Heading as='h5' size='sm' w={"60px"} color="black" cursor={"pointer"}>
+
+                            <Link to={"/signin"}>Sign In</Link>
                         </Heading>
                         <Divider orientation='vertical' />
                     </Box>
 
 
+                    <Link to={"/addtocart"}>
+                        <Box
+                            display={{ base: 'none', md: 'inline-flex' }}
+                            width="50px"
+                        >
 
-                    <Box
-                        display={{ base: 'none', md: 'inline-flex' }}
-                        // fontSize={'sm'}
-                        // fontWeight={600}
-                        width="50px"
-                        // color={'white'}
-                        // bg={'pink.400'}
-                        href={'#'}
-                    // _hover={{
-                    //     bg: 'pink.300',
-                    // }}
-                    >
 
-                        <Heading as='h6' size='xs' marginTop={4} color="black">
-                            ₹0
-                        </Heading>
-                        <Image src={"https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"} />
-                    </Box>
+                            <Heading as='h6' size='xs' marginTop={4} color="black">
+                                ₹0
+                            </Heading>
+                            <Image href={'/signin'} cursor={"pointer"} src={"https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"} />
 
+                        </Box>
+                    </Link>
                 </Stack>
             </Flex>
 
