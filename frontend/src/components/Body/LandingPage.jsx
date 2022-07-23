@@ -4,6 +4,7 @@ import BrowseCategories from './BrowseCategories'
 // import Carousal from './Carousal'
 import Footer from './Footer'
 import Carousel from './Carousal'
+import { Link } from 'react-router-dom'
 const LandingPage = () => {
     return (
         <div>
@@ -12,7 +13,9 @@ const LandingPage = () => {
                     <Heading as='h4' size='xs'>
                         LET'S ORDER FOE DELIVERY, PICK UP, OR DINE-IN
                     </Heading>
-                    <Button background={"rgb(228,0,43)"} borderRadius={20}>Start Order</Button>
+                    <Link to={"/menu"}>
+                        <Button background={"rgb(228,0,43)"} borderRadius={20}>Start Order</Button>
+                    </Link>
                 </Center>
             </Box>
             <Box bg='rgb(248,247,245)' w='100%' color='white'>

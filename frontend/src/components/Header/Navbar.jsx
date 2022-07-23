@@ -3,14 +3,8 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
+    // Button,
     Stack,
-    // Collapse,
-    // Icon,
-    // Link,
-    // Popover,
-    // PopoverTrigger,
-    // PopoverContent,
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
@@ -24,16 +18,12 @@ import {
     // ChevronDownIcon,
     // ChevronRightIcon,
 } from '@chakra-ui/icons';
-// BsPersonCircle
-// import {  } from "react"
+
 import { BsPersonCircle } from "react-icons/bs";
-import { Link, Navigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
 
-    const handle = () => {
-        <Navigate to="/addtocart" replace={true} />
-    }
 
     return (
         <Box bg={"white"} >
@@ -71,7 +61,7 @@ export default function WithSubnavigation() {
                         fontFamily={'heading'}
                         color={useColorModeValue('gray.800', 'white')}>
                         <Link to={"/"}>
-                            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" />
+                            <img src="https://online.kfc.co.in/static/media/kfcLogo.492728c6.svg" alt='kfc' />
                         </Link>
                     </Text>
                     <Text display={{ base: 'none', md: 'flex' }} marginLeft={50} >
@@ -87,29 +77,14 @@ export default function WithSubnavigation() {
                         </Heading>
                     </Text>
 
-                    {/* <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-                        <DesktopNav />
-                    </Flex> */}
                 </Flex>
 
                 <Stack
-
                     flex={{ base: 1, md: 0 }}
                     justify={'flex-end'}
                     direction={'row'}
                     spacing={6}
-                    width="300px"
-                >
-
-                    {/* <Button
-                        as={'a'}
-                        fontSize={'sm'}
-                        fontWeight={400}
-                        variant={'link'}
-                        href={'#'}>
-                        <BsPersonCircle color='black' />
-                        Sign In
-                    </Button> */}
+                    width="300px">
                     <Box display={"flex"} gap={3} marginTop={4}>
                         <BsPersonCircle color='black' size={25} />
 
@@ -126,8 +101,6 @@ export default function WithSubnavigation() {
                             display={{ base: 'none', md: 'inline-flex' }}
                             width="50px"
                         >
-
-
                             <Heading as='h6' size='xs' marginTop={4} color="black">
                                 ₹0
                             </Heading>
