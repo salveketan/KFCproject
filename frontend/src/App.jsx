@@ -7,10 +7,10 @@ import Navigation from './components/Navigate/Navigation';
 function App() {
   return (
     <div>
-      <Box>
+      <Box  >
         <Navbar />
       </Box>
-      <Box>
+      <Box >
         {/* <LandingPage /> */}
         <Navigation />
       </Box>
