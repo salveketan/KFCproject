@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import './App.css';
-import LandingPage from './components/Body/LandingPage';
+// import LandingPage from './components/Body/LandingPage';
 import Navbar from './components/Header/Navbar';
 import Navigation from './components/Navigate/Navigation';
 
