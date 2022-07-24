@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const User = require("../models/userSchema")
+const User = require("../models/userSchema");
+
 
 router.get("/", (req, res) => {
     res.send("hello home")
@@ -30,4 +31,34 @@ router.post("/signup", async (req, res) => {
 
 })
 
-module.exports = router
+
+// router.get("/users",async(req, res)=>{
+//     try {
+//         const user = await 
+//     } catch (error) {
+
+//     }
+// })
+
+router.get("/users", async (req, res) => {
+    // console.log("hello mid");
+    // res.send("hello world about");
+    res.send("yes");
+    // try {
+    //     const usersData = await User.find();
+    //     res.send(usersData);
+    // } catch (error) {
+    //     res.send(error)
+    // }
+});
+// router.get("", async (req, res) => {
+//     try {
+//         const user = await User.find().lean().exec();
+//         return res.status(200).send({ user: user }); // []
+//     } catch (err) {
+//         return res.status(500).send({ message: err.message });
+//     }
+// });
+
+
+module.exports = router;
