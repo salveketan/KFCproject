@@ -1,7 +1,7 @@
 import { Box, Button, Center, Flex, Heading, HStack, Text } from '@chakra-ui/react'
 import React from 'react'
 import Products from './Products'
-
+import Footer from "../Body/Footer"
 const AllProduct = () => {
     return (
         <div>
@@ -30,21 +30,22 @@ const AllProduct = () => {
                                 </Box>
                             </HStack>
                         </Box>
-                        <Heading as='h4' size='md' marginLeft={10}>
+                        <Heading color={"black"} as='h1' size='md' marginLeft={10} fontFamily={"National 2 Condensed"} fontStyle={"normal"} fontWeight={"700"} fontSize={"30px"} lineHeight={"43px"} letterSpacing={"1px"} textTransform={"uppercase"} paddingBottom={"1vw"}>
                             KFC MENU
                         </Heading>
                         <Text fontSize='md' marginLeft={10}>CHIKEN BUCKETS</Text>
-                        <Text fontSize='md' marginLeft={10}>CHIKEN BUCKETS</Text>
-                        <Text fontSize='md' marginLeft={10}>CHIKEN BUCKETS</Text>
-                        <Text fontSize='md' marginLeft={10}>CHIKEN BUCKETS</Text>
-                        <Text fontSize='md' marginLeft={10}>CHIKEN BUCKETS</Text>
-                        <Text fontSize='md' marginLeft={10}>CHIKEN BUCKETS</Text>
+                        <Text fontSize='md' marginLeft={10}>NEW LAUNCH</Text>
+                        <Text fontSize='md' marginLeft={10}>BIRYANI BUCKETS</Text>
+                        <Text fontSize='md' marginLeft={10}>BOX MEALS</Text>
+                        <Text fontSize='md' marginLeft={10}>BURGERS</Text>
+                        <Text fontSize='md' marginLeft={10}>BEVERAGES</Text>
                     </Box>
                     <Box w='60rem' bg='red.800' marginLeft={"400px"}>
                         <Products />
                     </Box>
                 </Flex>
             </Box>
+            <Footer />
 
         </div>
     )

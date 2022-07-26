@@ -11,6 +11,7 @@ import {
     Divider,
     Image,
     Heading,
+    Button,
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -18,6 +19,16 @@ import {
     // ChevronDownIcon,
     // ChevronRightIcon,
 } from '@chakra-ui/icons';
+
+// import {
+//     Modal,
+//     ModalOverlay,
+//     ModalContent,
+//     ModalHeader,
+//     ModalFooter,
+//     ModalBody,
+//     ModalCloseButton,
+// } from '@chakra-ui/react'
 
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from 'react-router-dom';
@@ -96,18 +107,15 @@ export default function WithSubnavigation() {
                     </Box>
 
 
-                    <Link to={"/addtocart"}>
-                        <Box
-                            display={{ base: 'none', md: 'inline-flex' }}
-                            width="50px"
-                        >
-                            <Heading as='h6' size='xs' marginTop={4} color="black">
-                                ₹0
-                            </Heading>
-                            <Image href={'/signin'} cursor={"pointer"} src={"https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"} />
+                    {/* <Link to={"/addtocart"}> */}
+                    <Box display={{ base: 'none', md: 'inline-flex' }} width="50px">
+                        <Heading as='h6' size='xs' marginTop={4} color="black">
+                            ₹0
+                        </Heading>
+                        <Image href={'/signin'} cursor={"pointer"} src={"https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"} />
+                    </Box>
+                    {/* </Link> */}
 
-                        </Box>
-                    </Link>
                 </Stack>
             </Flex>
 
@@ -117,6 +125,46 @@ export default function WithSubnavigation() {
         </Box>
     );
 }
+
+
+
+
+// function BasicUsage() {
+//     const { isOpen, onOpen, onClose } = useDisclosure()
+//     return (
+//         <>
+//             <Button onClick={onOpen}>Open Modal</Button>
+
+//             <Modal isOpen={isOpen} onClose={onClose}>
+//                 <ModalOverlay />
+//                 <ModalContent>
+//                     <ModalHeader>Modal Title</ModalHeader>
+//                     <ModalCloseButton />
+//                     <ModalBody>
+//                         {/* <Lorem count={2} /> */}
+//                     </ModalBody>
+
+//                     <ModalFooter>
+//                         <Button colorScheme='blue' mr={3} onClick={onClose}>
+//                             Close
+//                         </Button>
+//                         <Button variant='ghost'>Secondary Action</Button>
+//                     </ModalFooter>
+//                 </ModalContent>
+//             </Modal>
+//         </>
+//     )
+// }
+
+
+
+
+
+
+
+
+
+
 
 // const DesktopNav = () => {
 //     const linkColor = useColorModeValue('gray.600', 'gray.200');

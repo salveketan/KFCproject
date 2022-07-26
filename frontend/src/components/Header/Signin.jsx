@@ -19,7 +19,7 @@ const Signin = () => {
     e.preventDefault();
     const { name, email, phone } = user;
 
-    const data = await fetch("/signup", {
+    const data = await fetch("https://kfcbackendketan.herokuapp.com/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -90,3 +90,6 @@ const Signin = () => {
 }
 
 export default Signin
+
+
+
