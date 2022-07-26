@@ -14,7 +14,7 @@ const Signin = () => {
     value = e.target.value;
     setUser({ ...user, [name]: value })
   }
-  // console.log(user);
+  console.log(user);
   const PostData = async (e) => {
     e.preventDefault();
     const { name, email, phone } = user;
