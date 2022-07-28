@@ -26,7 +26,7 @@ const AllProduct = () => {
                             <Flex columns={[1, null, 2]} marginLeft={20}>
                                 <Box w='25rem' h="268px" position={"fixed"}>
                                     <Box bg='rgb(248,247,245)' w='100%' color='white'>
-                                        <HStack spacing='8px' marginLeft="80px">
+                                        <HStack spacing='8px' marginLeft="60px">
                                             <Box w='10px' bg='rgb(228,0,43)' color="rgb(228,0,43)">
                                                 1
                                             </Box>

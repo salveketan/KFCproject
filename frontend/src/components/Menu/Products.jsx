@@ -31,7 +31,7 @@ const Products = () => {
             </Box>}
             <Box bg="rgb(248,247,245)" w='100%' p={4} color='white'>
                 {/* This is the Box */}
-                <Input placeholder='Search our menu' size='sm' width="250px" borderRadius="20px" />
+                <Input placeholder='Search our menu' color="black" size='sm' width="250px" borderRadius="20px" />
             </Box>
             <Divider />
             <Box bg="rgb(248,247,245)" w='100%' p={7} color='white'>
