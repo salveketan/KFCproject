@@ -26,9 +26,20 @@ const AddToCart = () => {
 
   return (
     <div>
-      <Box bg='tomato' w='100%' p={4} color='white' display={"flex"}>
-        <Box bg='red' w='60%' p={4} color='white'>
-          This is the Box
+      <Box bg='tomato' w='100%' p={4} color='white'  >
+        <Box bg="black" w='60%' gap="5px" margin="auto">
+          <Heading as='h6' size='lg'>
+            Total No. of item in cart :
+          </Heading>
+          <Heading as='h6' size='lg'>
+            total :
+          </Heading>
+          <Heading as='h6' size='lg'>
+            payment
+          </Heading>
+        </Box>
+        <Box bg='red' w='60%' p={4} color='white' margin="auto">
+          cart
 
           <SimpleGrid columns={[1, null, 2]} spacing='40px'>
             {/* <Box bg='tomato' height='80px'></Box>
@@ -71,9 +82,7 @@ const AddToCart = () => {
 
 
         </Box>
-        <Box bg="black" w='30%' gap="5px">
 
-        </Box>
       </Box>
     </div>
   )
