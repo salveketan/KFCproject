@@ -110,7 +110,7 @@ export default function WithSubnavigation() {
                     <Link to={"/addtocart"}>
                         <Box display={{ base: 'none', md: 'inline-flex' }} width="50px">
                             <Heading as='h6' size='xs' marginTop={4} color="black">
-                                ₹0
+                                ₹9999
                             </Heading>
                             <Image href={'/signin'} cursor={"pointer"} src={"https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"} />
                         </Box>

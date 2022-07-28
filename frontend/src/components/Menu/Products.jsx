@@ -22,6 +22,7 @@ const Products = () => {
     const cartHandle = (e) => {
         // console.log(e);
         postCartData(dispatch, e);
+       
     }
 
     return (

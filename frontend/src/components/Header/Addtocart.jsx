@@ -20,6 +20,7 @@ const AddToCart = () => {
       method: "DELETE",
     })
     fetchCartdata(dispatch)
+    alert("Item is remove from cart")
   }
 
 

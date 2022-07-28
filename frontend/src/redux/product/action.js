@@ -70,7 +70,10 @@ const postCartData = (dispatch, e) => {
             desc: desc
         }
     })
-        .then((r) => dispatch(cart_data_success()))
+        .then((r) => {
+            alert("Item is added to Cart")
+            dispatch(cart_data_success())
+        })
         .catch((e) => dispatch(cart_data_failure()));
 
 }
