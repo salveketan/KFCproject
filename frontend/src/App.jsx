@@ -25,3 +25,4 @@ export default App;
 // https://online.kfc.co.in/static/media/KFC_Loader_Gif.66979359.gif
 
 
+//   "proxy": "http://localhost:5000",

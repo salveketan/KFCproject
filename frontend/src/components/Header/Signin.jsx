@@ -14,7 +14,7 @@ const Signin = () => {
     value = e.target.value;
     setUser({ ...user, [name]: value })
   }
-  console.log(user);
+  // console.log(user);
   const PostData = async (e) => {
     e.preventDefault();
     const { name, email, phone } = user;
@@ -22,7 +22,8 @@ const Signin = () => {
     const data = await fetch("https://kfcbackendketan.herokuapp.com/signup", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        'Access-Control-Allow-Origin': "*",
       },
       body: JSON.stringify({
         name, email, phone
@@ -33,10 +34,10 @@ const Signin = () => {
     // console.log(res);
     if (data.status === 422 || !res) {
       window.alert("invalid registration")
-      console.log("invalid registration");
+      // console.log("invalid registration");
     } else {
       window.alert("success registration")
-      console.log("success registration");
+      // console.log("success registration");
       navigate("/menu", { replace: true })
     }
   }

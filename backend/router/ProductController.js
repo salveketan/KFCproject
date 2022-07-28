@@ -18,6 +18,7 @@ router.get("", async (req, res) => {
     }
 });
 
+// ======single product==========
 
 // router.get("/:id", async (req, res) => {
 //     try {

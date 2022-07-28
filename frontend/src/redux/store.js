@@ -1,11 +1,16 @@
-import { legacy_createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk"
-import { productReducer } from "./product/reducer";
+import { legacy_createStore, combineReducers, applyMiddleware, compose } from "redux";
+// import thunk from "redux-thunk"
+import productReducer from "./product/reducer"
 
 const rootReducer = combineReducers({
     productData: productReducer
 })
 
-export const store = legacy_createStore(rootReducer, applyMiddleware(thunk));
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE || compose;
+
+export const store = legacy_createStore(
+    rootReducer,
+    // composeEnhancers(applyMiddleware(thunk))
+);
 
 // console.log(store.getState());
