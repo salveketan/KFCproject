@@ -4,9 +4,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchCartdata } from '../../redux/product/action'
 import { CgShoppingBag } from "react-icons/cg"
 
+import ModalButton3 from '../Body/ModalButton3';
+
 const AddToCart = () => {
   const cartData = useSelector(store => store.productData.cart.cart);
-  // console.log(cartData);
+
+  let totalItem = 0;
+  cartData?.forEach((element, index) => {
+    totalItem = (index + 1);
+  });
+
+  let sum = 0
+  cartData?.forEach(element => {
+    sum += (element.price);
+  });
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -16,7 +27,7 @@ const AddToCart = () => {
 
   let deleteItem = async (id) => {
     // console.log(id)
-    await fetch(`http://localhost:5000/cart/${id}`, {
+    await fetch(`https://kfcbackendketan.herokuapp.com/cart/${id}`, {
       method: "DELETE",
     })
     fetchCartdata(dispatch)
@@ -24,54 +35,48 @@ const AddToCart = () => {
   }
 
 
+
   return (
     <div>
-      <Box bg='tomato' w='100%' p={4} color='white'  >
-        <Box bg="black" w='60%' gap="5px" margin="auto">
-          <Heading as='h6' size='lg'>
-            Total No. of item in cart :
+      <Box w='100%' p={4} bg='rgb(248,247,245)'  >
+        <Box w='60%' gap="5px" margin="auto">
+          <Heading color={"black"} as='h6' size='lg' fontStyle={"italic"} fontFamily={"sans-serif"}>
+            Total No. of item in cart : {totalItem}
+          </Heading>
+          <Heading color={"black"}  as='h6' size='lg' fontStyle={"italic"} fontFamily={"sans-serif"}>
+            total : ₹{sum}
           </Heading>
           <Heading as='h6' size='lg'>
-            total :
-          </Heading>
-          <Heading as='h6' size='lg'>
-            payment
+            <ModalButton3 />
           </Heading>
         </Box>
-        <Box bg='red' w='60%' p={4} color='white' margin="auto">
-          cart
+        <Box bg={"rgb(232,232,227)"} w='60%' p={4} color='white' margin="auto" marginTop={5} borderRadius={5}>
 
           <SimpleGrid columns={[1, null, 2]} spacing='40px'>
-            {/* <Box bg='tomato' height='80px'></Box>
-            <Box bg='tomato' height='80px'></Box>
-            <Box bg='tomato' height='80px'></Box>
-            <Box bg='tomato' height='80px'></Box>
-            <Box bg='tomato' height='80px'></Box> */}
-
             {
               cartData?.map((e) =>
                 // console.log(e);
-                <Box bg='tomato' >
-                  <Box bg='red'  ><Image borderRadius={"10px"} src={e.image_url}></Image></Box>
+                <Box  >
+                  <Box  ><Image borderRadius={"10px"} src={e.image_url}></Image></Box>
                   <Box >
                     <Heading color={"black"} as='h5' size='sm' fontFamily={"National 2 Regular"} fontStyle={"normal"} fontWeight={"600"} fontSize={"16px"} lineHeight={"43px"}  >
                       {e.title}
                     </Heading>
                   </Box>
-                  <Box bg='red' display={"flex"} color={"black"}>
+                  <Box  display={"flex"} color={"black"}>
                     <img src="https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg" alt="*" />
                     <Text marginLeft={"5px"} fontSize='xs'>Non veg -Serves 2-3</Text>
                   </Box>
-                  <Box bg='green' display={"flex"}>
+                  <Box display={"flex"}>
                     <Text color={"black"} as='s' marginRight={"5px"}> ₹{e.price}</Text>
                     <Text color={"red"} > ₹{e.price - 43}  </Text>
                   </Box>
-                  <Box bg='pink'>
+                  <Box >
                     <Text fontSize='sm' color={"black"}>{e.desc}</Text>
                   </Box>
 
                   <Button bg={"rgb(228,0,43)"} textAlign={"center"} marginLeft={"100px"} marginTop={"20px"} onClick={() => deleteItem(e._id)} >
-                    <Text fontSize='sm' w={"150px"} display="flex" gap={3} > Remove < CgShoppingBag size={20} /></Text>
+                    <Text  fontSize='sm' w={"150px"} display="flex" gap={3} > Remove < CgShoppingBag size={20} /></Text>
                   </Button>
                 </Box>
 

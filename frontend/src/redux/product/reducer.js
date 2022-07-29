@@ -4,7 +4,8 @@ const initialState = {
     product: [],
     cart: [],
     error: "",
-    loading: false,
+    loading: false
+
 }
 
 const productReducer = (state = initialState, action) => {
@@ -41,6 +42,8 @@ const productReducer = (state = initialState, action) => {
         }
         case types.CART_DATA_SUCCESS: {
             return state
+
+
             // loading: false,
             // cart: payload
 

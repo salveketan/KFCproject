@@ -62,7 +62,7 @@ const postCartData = (dispatch, e) => {
     // dispatch(cart_data_request());
     axios({
         method: "POST",
-        url: "http://localhost:5000/cart",
+        url: "https://kfcbackendketan.herokuapp.com/cart",
         data: {
             image_url: image_url,
             title: title,
@@ -72,9 +72,9 @@ const postCartData = (dispatch, e) => {
     })
         .then((r) => {
             alert("Item is added to Cart")
-            dispatch(cart_data_success())
+            dispatch(cart_data_success(r.data))
         })
-        .catch((e) => dispatch(cart_data_failure()));
+        .catch((e) => dispatch(cart_data_failure(e.data)));
 
 }
 //===========================get cart========================
@@ -104,7 +104,7 @@ const fetch_cart_data_failure = (payload) => {
 const fetchCartdata = (dispatch) => {
     dispatch(fetch_cart_data_request());
 
-    axios.get("http://localhost:5000/cart")
+    axios.get("https://kfcbackendketan.herokuapp.com/cart")
         .then((r) => {
             // console.log(r)
             dispatch(fetch_cart_data_success(r.data))

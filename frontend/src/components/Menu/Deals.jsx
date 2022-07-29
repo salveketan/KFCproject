@@ -21,14 +21,14 @@ const Deals = () => {
             <Box bg="rgb(248,247,245)" paddingBottom={20}>
                 <Box marginLeft={40} >
                     <Box>
-                        <HStack spacing='14px' marginLeft={10}>
-                            <Box w='18px' h='40px' bg='rgb(228,0,43)' color={"rgb(228,0,43)"}>
+                        <HStack spacing='10px' marginLeft={10}>
+                            <Box w='15px' h='35px' bg='rgb(228,0,43)' color={"rgb(228,0,43)"}>
                                 1
                             </Box>
-                            <Box w='18px' h='40px' bg='rgb(228,0,43)' color={"rgb(228,0,43)"}>
+                            <Box w='15px' h='35px' bg='rgb(228,0,43)' color={"rgb(228,0,43)"}>
                                 2
                             </Box>
-                            <Box w='18px' h='40px' bg='rgb(228,0,43)' color={"rgb(228,0,43)"}>
+                            <Box w='15px' h='35px' bg='rgb(228,0,43)' color={"rgb(228,0,43)"}>
                                 3
                             </Box>
                         </HStack>

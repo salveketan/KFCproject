@@ -32,9 +32,16 @@ import {
 
 import { BsPersonCircle } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
-
+    const cartData = useSelector(store => store.productData.cart.cart);
+    // console.log("ketan", cartData[0].price);
+    let sum = 0
+    cartData?.forEach(element => {
+        sum += (element.price);
+    });
+    console.log("nav:", sum);
 
     return (
         <Box bg={"white"} >
@@ -110,7 +117,7 @@ export default function WithSubnavigation() {
                     <Link to={"/addtocart"}>
                         <Box display={{ base: 'none', md: 'inline-flex' }} width="50px">
                             <Heading as='h6' size='xs' marginTop={4} color="black">
-                                ₹9999
+                                ₹{sum}
                             </Heading>
                             <Image href={'/signin'} cursor={"pointer"} src={"https://images.ctfassets.net/wtodlh47qxpt/6qtBVFuno7pdwOQ9RIvYm9/d13e9b7242980972cf49beddde2cc295/bucket_cart_icon.svg"} />
                         </Box>

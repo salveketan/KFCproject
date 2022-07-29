@@ -17,7 +17,7 @@ const Products = () => {
             (fetchProductData(dispatch))
         }
     }, [dispatch]);
-    console.log(products);
+    // console.log(products);
 
     const cartHandle = (e) => {
         // console.log(e);
