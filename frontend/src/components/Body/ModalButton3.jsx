@@ -16,13 +16,13 @@ import {
 } from '@chakra-ui/react'
 import ModalButton4 from './ModalButton4'
 
-const ModalButton3 = () => {
+const ModalButton3 = ({ totalItem }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-
+    console.log(totalItem);
 
     return (
         <div>
-            <Button bg={"rgb(228,0,43)"} borderRadius="10px" width="200px" onClick={onOpen} color={"black"} >Place Order</Button>
+            <Button bg={"rgb(228,0,43)"} borderRadius="10px" width="200px" onClick={onOpen} color={"black"} disabled={totalItem == 0}>Place Order</Button>
 
             <Modal isOpen={isOpen} onClose={onClose} size={'xl'}>
                 <ModalOverlay />
@@ -48,8 +48,8 @@ const ModalButton3 = () => {
                         <Box width="500px">
                             <Box width="200px" textAlign="center">
                                 {/* <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black"> */}
-                                    <ModalButton4/>
-                                {/* </Button> */} 
+                                <ModalButton4 />
+                                {/* </Button> */}
                             </Box>
                             <Box width="200px" textAlign="center">
                                 <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black">Dine In</Button>

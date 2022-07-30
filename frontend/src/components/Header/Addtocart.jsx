@@ -43,11 +43,11 @@ const AddToCart = () => {
           <Heading color={"black"} as='h6' size='lg' fontStyle={"italic"} fontFamily={"sans-serif"}>
             Total No. of item in cart : {totalItem}
           </Heading>
-          <Heading color={"black"}  as='h6' size='lg' fontStyle={"italic"} fontFamily={"sans-serif"}>
+          <Heading color={"black"} as='h6' size='lg' fontStyle={"italic"} fontFamily={"sans-serif"}>
             total : ₹{sum}
           </Heading>
           <Heading as='h6' size='lg'>
-            <ModalButton3 />
+            <ModalButton3 totalItem={totalItem} />
           </Heading>
         </Box>
         <Box bg={"rgb(232,232,227)"} w='60%' p={4} color='white' margin="auto" marginTop={5} borderRadius={5}>
@@ -63,7 +63,7 @@ const AddToCart = () => {
                       {e.title}
                     </Heading>
                   </Box>
-                  <Box  display={"flex"} color={"black"}>
+                  <Box display={"flex"} color={"black"}>
                     <img src="https://online.kfc.co.in/static/media/Non_veg_dot_Icon.1b0fc8fd.svg" alt="*" />
                     <Text marginLeft={"5px"} fontSize='xs'>Non veg -Serves 2-3</Text>
                   </Box>
@@ -76,7 +76,7 @@ const AddToCart = () => {
                   </Box>
 
                   <Button bg={"rgb(228,0,43)"} textAlign={"center"} marginLeft={"100px"} marginTop={"20px"} onClick={() => deleteItem(e._id)} >
-                    <Text  fontSize='sm' w={"150px"} display="flex" gap={3} > Remove < CgShoppingBag size={20} /></Text>
+                    <Text fontSize='sm' w={"150px"} display="flex" gap={3} > Remove < CgShoppingBag size={20} /></Text>
                   </Button>
                 </Box>
 

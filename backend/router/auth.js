@@ -15,10 +15,10 @@ router.post("/signup", async (req, res) => {
         return res.status(422).json({ Error: "please all field" })
     }
     try {
-        const userExist = await User.findOne({ email: email });
+        const userExist = await User.findOne({ phone: phone });
 
         if (userExist) {
-            return res.status(422).json({ error: "email already exist" })
+            return res.status(422).json({ error: "Phone no. is already exist" })
         }
 
         const user = new User({ name, email, phone });
@@ -31,6 +31,23 @@ router.post("/signup", async (req, res) => {
 
 })
 
+router.post("/signin", async (req, res) => {
+
+    const { phone } = req.body;
+
+    try {
+        const userLoginExist = await User.findOne({ phone: phone });
+        // console.log(userLoginExist);
+        if (userLoginExist) {
+            res.status(201).json({ message: "successfull login" })
+        } else {
+            res.status(400).json({ message: "Invalid Credientials" })
+        }
+    } catch (error) {
+        console.log(error);
+    }
+
+});
 
 // router.get("/users",async(req, res)=>{
 //     try {
@@ -51,14 +68,5 @@ router.get("/users", async (req, res) => {
     //     res.send(error)
     // }
 });
-// router.get("", async (req, res) => {
-//     try {
-//         const user = await User.find().lean().exec();
-//         return res.status(200).send({ user: user }); // []
-//     } catch (err) {
-//         return res.status(500).send({ message: err.message });
-//     }
-// });
-
 
 module.exports = router;

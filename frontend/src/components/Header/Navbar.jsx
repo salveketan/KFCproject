@@ -41,7 +41,7 @@ export default function WithSubnavigation() {
     cartData?.forEach(element => {
         sum += (element.price);
     });
-    console.log("nav:", sum);
+    // console.log("nav:", sum);
 
     return (
         <Box bg={"white"} >
@@ -108,7 +108,7 @@ export default function WithSubnavigation() {
 
                         <Heading as='h5' size='sm' w={"60px"} color="black" cursor={"pointer"}>
 
-                            <Link to={"/signin"}>Sign In</Link>
+                            <Link to={"/login"}>Sign In</Link>
                         </Heading>
                         <Divider orientation='vertical' />
                     </Box>

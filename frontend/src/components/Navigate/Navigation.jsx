@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import LandingPage from '../Body/LandingPage'
 import AddToCart from '../Header/Addtocart'
+import Login from '../Header/Login'
 import Signin from '../Header/Signin'
 import AllProduct from '../Menu/AllProduct'
 import Deals from '../Menu/Deals'
@@ -15,6 +16,7 @@ const Navigation = () => {
         <Route path='/signin' element={<Signin />}></Route>
         <Route path='/addtocart' element={<AddToCart />}></Route>
         <Route path='/deals' element={<Deals />}></Route>
+        <Route path='/login' element={<Login />}></Route>
       </Routes>
     </div>
   )

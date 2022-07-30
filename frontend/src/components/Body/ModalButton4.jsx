@@ -56,7 +56,7 @@ const ModalButton4 = () => {
                     <ModalBody>
                         <Center>
                             <Heading as='h3' size='lg'>
-                                Your oder will ready in {time}min, and your order no. is {oredrNumber}
+                                Your order will ready in {time}min, and your order no. is {oredrNumber}
                             </Heading>
                         </Center>
                     </ModalBody>
@@ -66,12 +66,6 @@ const ModalButton4 = () => {
                             <Box width="200px" textAlign="center" marginTop="110px">
                                 <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black" onClick={handle}>Confirm Order</Button>
                             </Box>
-                            {/* <Box width="200px" textAlign="center">
-                                <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black">Dine In</Button>
-                            </Box>
-                            <Box width="200px" textAlign="center">
-                                <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black">Delivery</Button>
-                            </Box> */}
                         </Box>
                     </ModalFooter>
                 </ModalContent>

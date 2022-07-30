@@ -35,10 +35,16 @@ const Signin = () => {
     if (data.status === 422 || !res) {
       window.alert("invalid registration")
       // console.log("invalid registration");
-    } else {
-      window.alert("success registration")
-      // console.log("success registration");
-      navigate("/menu", { replace: true })
+    }
+    else {
+      window.alert("OPT is send to your number");
+
+      setTimeout(() => {
+        window.alert("please wait we are verifying your OTP");
+      }, 2000);
+      setTimeout(() => {
+        navigate("/menu", { replace: true })
+      }, 2000);
     }
   }
 
