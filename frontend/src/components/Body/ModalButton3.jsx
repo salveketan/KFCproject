@@ -47,9 +47,7 @@ const ModalButton3 = ({ totalItem }) => {
                     <ModalFooter>
                         <Box width="500px">
                             <Box width="200px" textAlign="center">
-                                {/* <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black"> */}
                                 <ModalButton4 />
-                                {/* </Button> */}
                             </Box>
                             <Box width="200px" textAlign="center">
                                 <Button borderRadius="50px" width="200px" marginLeft="100px" marginTop={3} variant='ghost' border="1px solid black">Dine In</Button>

@@ -32,15 +32,11 @@ const ModalButton2 = () => {
                         <Heading as='h3' size='lg'>
                             OFFERS & DEALS
                         </Heading>
-                        {/* </Center> */}
                     </ModalHeader>
                     <ModalCloseButton />
                     <Divider />
                     <ModalBody>
                         <Center>
-                            {/* <Heading as='h3' size='lg'>
-                                
-                            </Heading> */}
                             <Text fontSize='xl'>
                                 1 PC FREE CHICKEN ZINGER ON A CART VALUE OF 399 OR ABOVE ON FIRST ORDER. ONLY FOR REGISTERED USERS.
                             </Text>
